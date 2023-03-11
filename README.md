@@ -11,8 +11,13 @@
 * 需安裝 [Microsoft RDLC Report Designer 2022](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftRdlcReportDesignerforVisualStudio2022)
 * .NET6
 * Blazor Server App 
+   
+> ### 有點冏的地方
+> .NET6 Blazor Server App 類型的專案無法 “新增RDLC 報表定義檔”。   
+> 要繞一下程序，需另開一個 WinFormForRdlcFile 的專案只為專門加入『*.rdlc』『*.xsd』等檔案然後複製到 .NET6 Blaozr Server App 類型的專案才能【新增】RDLC 報表定義檔。
  
 ## 參考文件
 * [YouTube - RDLC Report in Blazor Web Assembly | PDF & Excel Export using RDLC in Blazor](https://www.youtube.com/watch?v=7V0Yb5drLgQ&ab_channel=AshProgHelp-ProgrammingHelp)   
-  --- 這是用於 2019年 .NET5 時期，然在 .NET6 已過時，不過操作程序仍俱有參考性。其中使用第三方套件 _AspNetCore.Reporting_ 但已不維護了的樣子。
-  
+  --- 這是用於 2019年 .NET5 時期，然在 .NET6 已過時，不過操作程序仍俱有參考性。其中使用第三方套件 _AspNetCore.Reporting_ 但已不維護了的樣子。  
+* [YouTube - RDLC Sub Report in Blazor | Display Image on RDLC Report](https://www.youtube.com/watch?v=6U72bdyMahg&ab_channel=doTNETMania)   
+  --- 子報表與圖片範例。 
