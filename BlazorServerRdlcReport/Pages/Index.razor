@@ -8,13 +8,24 @@
 <h1>RDLC Report in Blazor</h1>
 
 <button class="btn btn-primary" @onclick=HandleClick>
-  產生報表
+  產生 RDLC 報表轉 PDF 下載
 </button>
 
+@if (f_loading)
+{
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+}
+
 @code {
+  bool f_loading = false;
+
   async Task HandleClick()
   {
+    f_loading = true;
     var pdf = await Task.Run(() => empSvc.MakeRdlcReport());
     await jsTool.DownloadFileAsync("我的 RDLC 報表.pdf", pdf);
+    f_loading = false;
   }
 }
